@@ -147,7 +147,7 @@ For more information, see [Apple ProximityReader Documentation](https://develope
 
 ```swift
 // Check if location permission is granted
-let result = sdk.ttp.checkCompatibility()
+let result = fluteSdk.ttp.checkCompatibility()
 if result.locationPermission != .granted {
     // Request location permission from user
     locationManager.requestWhenInUseAuthorization()
@@ -160,25 +160,25 @@ if result.locationPermission != .granted {
 import FluteMobileSDK
 
 // Initialize SDK
-let sdk = try FluteMobileSdk(environment: .production)
+let fluteSdk = try FluteMobileSdk(environment: .production)
 
 // Authenticate
-try await sdk.authenticate(
+try await fluteSdk.authenticate(
     clientId: "your-client-id",
     clientSecret: "your-client-secret"
 )
 
 // Check Tap to Pay compatibility
-let compatibility = sdk.ttp.checkCompatibility()
+let compatibility = fluteSdk.ttp.checkCompatibility()
 if compatibility.isCompatible {
     // Activate Tap to Pay
-    try await sdk.ttp.activate()
+    try await fluteSdk.ttp.activate()
 
     // Prepare for transaction
-    try await sdk.ttp.prepare()
+    try await fluteSdk.ttp.prepare()
 
     // Perform transaction
-    let result = try await sdk.ttp.performTransaction(amount: 10.00)
+    let result = try await fluteSdk.ttp.performTransaction(amount: 10.00)
 }
 ```
 
