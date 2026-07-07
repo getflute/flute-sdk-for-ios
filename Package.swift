@@ -28,13 +28,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Flute",
-            url: "https://github.com/getflute/flute-sdk-for-ios/releases/download/v1.0.0-pre-release-2/Flute.xcframework.zip",
-            checksum: "c78fab619aad113461a4f9e5f0b406574c9ced49cc47daf4661679e02d7c67e6"
+            url: "https://github.com/getflute/flute-sdk-for-ios/releases/download/v1.0.0/Flute.xcframework.zip",
+            checksum: "10d603e7e95131bc82bcc52d9457272fe8103bf6d24b68f58fa6fa5fa392e4e4"
         ),
         .binaryTarget(
             name: "CloudCommerce",
-            url: "https://github.com/getflute/flute-sdk-for-ios/releases/download/v1.0.0-pre-release-2/CloudCommerce.xcframework.zip",
-            checksum: "e10ba29efdbb591862e28a5d35b9d85896b80843c420b08e51df88052f9ee8c9"
+            url: "https://github.com/getflute/flute-sdk-for-ios/releases/download/v1.0.0/CloudCommerce.xcframework.zip",
+            checksum: "9e59f2013544e0307e8e27239bc2d8dcadc5cbd949dcd1bb1422d4eaf3a4e74c"
         ),
         .target(
             name: "FluteMobileSDK",
